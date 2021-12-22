@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #61D2B4;
+    --white: #FFFFFF;
+    --heading: #343434;
+    --p: #4D4D4D;
+}
+
+p {
+    color: var(--p);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =============== navbar =============== */
+.navbar {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.165);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar-brand img {
+    width: 170px;
+}
+
+nav ul li {
+    padding-right: 25px;
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--green) !important;
+}
+
+nav ul li a:hover {
+    color: var(--heading) !important;
+    transition: 0.5s;
+}
+
+nav ul li a::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: var(--green);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: 2px solid var(--green) !important;
+    color: var(--green) !important;
+}
+
+
+/* ================== bannar section ============== */
+
+#bannar {
+    background: linear-gradient(#0000006b, #0000006b), url('../images/bannar.jpg')no-repeat center /cover fixed;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hero {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    bottom: inherit !important;
+    margin: auto;
+}
+
+.hero h1 {
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    background-color: var(--green);
+    padding: 10px 40px;
+    border-radius: 50px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.hero-btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white) !important;
+    transition: 0.6s ease-in-out;
+}
+
+/* =============== services ================ */
+
+.heading-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--heading);
+}
+
+.heading-content h1::after {
+    content: "";
+    height: 3px;
+    width: 170px;
+    display: block;
+    background-color: var(--green);
+    margin: auto;
+    margin-top: 20px;
+}
+
+.heading-content p {
+    color: var(--p);
+    font-size: 18px;
+    font-weight: 400;
+    margin: 20px 0 70px 0;
+}
+
+.services-icon i {
+    font-size: 25px;
+    color: var(--green);
+    border: 1px solid rgb(224, 221, 221);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    line-height: 65px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.services-content:hover .services-icon i {
+    background-color: var(--green);
+    color: var(--white);
+    transition: 0.8s;
+}
+
+/* =============== features ================== */
+
+#features {
+    background: linear-gradient(#232b2b6b, #232b2b6b), url('../images/bannar-hill.jpg') no-repeat center / cover fixed;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 0 !important;
+}
+
+.features-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-icon i {
+    font-size: 25px;
+    border: 1px solid var(--green);
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    margin-right: 10px;
+    color: var(--green);
+}
+
+.features-content:hover .features-icon i {
+    background-color: var(--green);
+    color: var(--white);
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+
+/* ====================== portfolio ==================== */
+
+.classification-btn {
+    padding: 10px 40px;
+    border-radius: 50px;
+    background-color: var(--green);
+    outline: none !important;
+    box-shadow: none !important;
+    color: var(--white);
+    margin-right: 5px;
+    margin-top: -40px;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-btn {
+        line-height: 80px;
+    }
+}
+
+.classification-btn:hover {
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    color: var(--green);
+    transition: 0.7s;
+}
+
+.portfolio-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-img:hover {
+    background-color: black;
+}
+
+.portfolio-img img {
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.portfolio-img img:hover {
+    transform: scale(1.2);
+}
+
+.portfolio-img:hover img {
+    opacity: 0.4;
+}
+
+/* ============= intro video section =============== */
+
+#intro {
+    background-color: var(--green);
+}
+
+.fa-film {
+    font-size: 30px;
+    color: var(--white);
+    border: 3px solid white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.fa-film:hover {
+    background-color: var(--white);
+    color: var(--green);
+    transition: 0.6s ease-in-out;
+}
+
+/* ============== pricing =================== */
+
+#price {
+    background-color: rgb(223, 222, 222);
+}
+
+.price-heading {
+    background-color: var(--green);
+    padding: 20px 50px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.full-price-box {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(165, 162, 162);
+}
+
+.full-price-box:hover {
+    box-shadow: 5px 5px 30px rgb(70, 68, 68);
+    transition: 0.5s;
+}
+
+.full-price-box h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.full-price-box span {
+    color: var(--green);
+}
+
+.price-content {
+    padding: 0 20px 40px;
+}
+
+.price-content .fa-check-circle {
+    color: var(--green);
+    margin-right: 20px;
+}
+
+.price-content ul {
+    list-style: none;
+}
+
+.price-content ul li {
+    line-height: 50px;
+    border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+.price-btn {
+    padding: 10px 40px;
+    border-radius: 50px;
+    background-color: var(--green);
+    outline: none !important;
+    box-shadow: none !important;
+    color: var(--white);
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.price-btn:hover {
+    background-color: var(--white);
+    border: 2px solid var(--green);
+    color: var(--green);
+    transition: 0.5s ease-in-out;
+}
+
+/* ================== work section ===================== */
+
+#work {
+    background: linear-gradient(#232b2b9e, #232b2b9e), url('../images/bannar-discuss.jpg') no-repeat center / cover fixed;
+}
+
+.work-project i {
+    font-size: 42px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+/* =============== our team ================ */
+
+#team {
+    background-color: rgb(223, 222, 222);
+}
+
+.team-card {
+    background-color: var(--white);
+    box-shadow: 5px 5px 10px rgb(165, 162, 162);
+    border-radius: 5px;
+}
+
+.team-card:hover {
+    box-shadow: 5px 5px 30px rgb(70, 68, 68);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.team-img img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+
+.team-content, .team-social {
+    padding: 0 20px 20px;
+}
+
+.team-social i {
+    font-size: 20px;
+    color: var(--green);
+    background-color: rgb(235, 234, 234);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.6s ease-in-out;
+}
+
+.team-social i:nth-child(1):hover {
+    background-color: #5D78B4;
+    color: var(--white);
+}
+
+.team-social i:nth-child(2):hover {
+    background-color: #3CAEF4;
+    color: var(--white);
+}
+
+.team-social i:nth-child(3):hover {
+    background-color: #DE5348;
+    color: var(--white);
+}
+
+.team-social i:nth-child(4):hover {
+    background-color: #3295C4;
+    color: var(--white);
+}
+
+/* ========================= customer -==================== */
+
+#customer {
+    background: linear-gradient(#232b2b9e, #232b2b9e), url('../images/end-client.jpg') no-repeat center/ cover fixed;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.customer-content {
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.customer-content img {
+    margin: auto;
+    border-radius: 50%;
+    border: 7px solid white;
+}
+
+.customer-content h5 {
+    color: var(--white);
+}
+
+.customer-content p {
+    color: var(--white);
+    margin-top: 20px;
+}
+
+/* ================= blog ===================== */
+
+.blog-content {
+    padding: 10px;
+    background-color: rgb(223, 222, 222);
+}
+
+.blog-content i {
+    color: var(--green);
+}
+
+.blog-box {
+    box-shadow: 5px 5px 10px rgb(165, 162, 162);
+}
+
+.blog-box:hover {
+    box-shadow: 5px 5px 30px rgb(70, 68, 68);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+/* ===================== contact section ========================== */
+
+#contact {
+    background-color: #343A40;
+}
+
+#contact span {
+    color: var(--green);
+    margin-left: 10px;
+}
+
+.contact-social i {
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.contact-social i:nth-child(1) {
+    color: #5D78B4;
+}
+
+.contact-social i:nth-child(1):hover {
+    background-color: #5D78B4;
+    color: var(--white);
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-social i:nth-child(2) {
+    color: #3CAEF4;
+}
+
+.contact-social i:nth-child(2):hover {
+    background-color: #3CAEF4;
+    color: var(--white);
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-social i:nth-child(3) {
+    color: #DE5348;
+}
+
+.contact-social i:nth-child(3):hover {
+    background-color: #DE5348;
+    color: var(--white);
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-social i:nth-child(4) {
+    color: #3295C4;
+}
+
+.contact-social i:nth-child(4):hover {
+    background-color: #3295C4;
+    color: var(--white);
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-social i:nth-child(5) {
+    color: #DE5348;
+}
+
+.contact-social i:nth-child(5):hover {
+    background-color: #DE5348;
+    color: var(--white);
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+/* ==================== contact ====================== */
+
+.form-control {
+    background-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: white !important;
+    resize: none !important;
+
+}
+
+.form-control:focus {
+    border: 1px solid var(--green) !important;
+}
+
+.classification-btn:hover {
+    background-color: transparent !important;
+}
+
+/* ================== footer ===================== */
+
+#footer {
+    background-color: #292F35;
+    padding: 30px 0;
+}
+
+#footer p {
+    transform: translateY(15px);
+}
